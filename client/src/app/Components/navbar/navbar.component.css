@@ -1,0 +1,18 @@
+.mat-toolbar{
+    background-color: cornflowerblue;
+    color: white;
+  }
+  .mat-button{
+     color: white;
+  }
+  .spacer{
+    flex: 1 1 auto;
+  }
+
+.heading{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  }
+
+.btn{
+    margin-left: 10px;
+}

@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -31,7 +32,8 @@ import { LoginComponent } from './Components/login/login.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatDialogModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

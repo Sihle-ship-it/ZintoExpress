@@ -1,16 +1,29 @@
 .container{
     margin: 15px 20px;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .card{
     margin: 15px;
+    display: grid;
+    grid-template-rows: auto;
 }
 
 
 img{
     width: 250px;
     height: 250px;
+     object-fit: cover;
+    /* width: 100%;
+    height: 100%; */
+}
+
+.button{
+    display: block;
+    min-width: auto;
+    padding: 12px;
+    width: 100%;
 }

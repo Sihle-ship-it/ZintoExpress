@@ -12,14 +12,15 @@ public class ProductServiceImpl implements ProductService{
 
 	@Autowired
 	private ProductRepository productRepository;
-	@Autowired
+	
 	private Product product;
-	@Autowired
+	
 	private Rating rating;
 	
 	@Override
 	public Product saveProduct(Product product) {
 		//Save Product
+		this.product = new Product();
 		this.product.setId(product.getId());
 		this.product.setTitle(product.getTitle());
 		this.product.setPrice(product.getPrice());
@@ -28,15 +29,16 @@ public class ProductServiceImpl implements ProductService{
 		this.product.setImage(product.getImage());
 		
 		//Save Ratings
+		rating = new Rating();
 		rating.setRate(product.getRating().getRate());
 		rating.setCount(product.getRating().getCount());
 		rating.setProduct(this.product);
-		product.setRating(this.rating);
+		this.product.setRating(rating);
 		return productRepository.save(this.product);
 	}
 
 }
-//
+// zinto.express.io.entity.Product.getRating()"
 //
 //{
 //"id": 1,

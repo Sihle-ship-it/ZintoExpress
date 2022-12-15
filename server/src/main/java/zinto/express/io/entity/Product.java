@@ -1,25 +1,13 @@
 package zinto.express.io.entity;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
 
 @Entity
 public class Product {
 
-	
-	
-	public Rating getRating() {
-		return rating;
-	}
-	public void setRating(Rating rating) {
-		this.rating = rating;
-	}
+
 	@Id
 	private int id;
 	private String title;
@@ -27,10 +15,10 @@ public class Product {
 	private String category;
 	private String description;
 	private String image;
+	private double rate;
+	private int count;
+	private int quantity;
 	
-	@OneToOne(mappedBy = "product", fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-	@JsonIgnore
-	private Rating rating;
 	
 	
 	public int getId() {
@@ -69,9 +57,24 @@ public class Product {
 	public void setImage(String image) {
 		this.image = image;
 	}
+	public double getRate() {
+		return rate;
+	}
+	public void setRate(double rate) {
+		this.rate = rate;
+	}
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
 	
-	
-	
-	
-	
+
 }

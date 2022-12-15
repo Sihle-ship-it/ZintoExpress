@@ -4,6 +4,6 @@ import zinto.express.io.entity.Product;
 
 public interface ProductService {
 
-	Product saveProduct(Product product);
+	Product saveProduct(Product[] product);
 
 }

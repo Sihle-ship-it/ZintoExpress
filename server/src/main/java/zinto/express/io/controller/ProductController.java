@@ -1,6 +1,7 @@
 package zinto.express.io.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,9 +19,10 @@ public class ProductController {
 	@Autowired
 	ProductRepository productRepository;
 	
-	@PostMapping("/product")
-	public Product saveProduct(@RequestBody Product product) {
-		System.out.println(product);
+	
+	@CrossOrigin(origins = "http://localhost:4200")
+	@PostMapping("/products")
+	public Product saveProduct(@RequestBody Product[] product) {
 		return productService.saveProduct(product);
 	}
 	
